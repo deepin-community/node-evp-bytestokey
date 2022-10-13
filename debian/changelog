@@ -1,0 +1,87 @@
+node-evp-bytestokey (1.0.3-9) unstable; urgency=medium
+
+  * Bump debhelper and policy (no changes)
+  * Move to /usr/share
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 15 Sep 2019 22:02:53 +0200
+
+node-evp-bytestokey (1.0.3-8) unstable; urgency=medium
+
+  * Team upload.
+  * Add libssl-dev dependency also on autopkgtestsuite.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 31 Jan 2019 15:44:25 +0100
+
+node-evp-bytestokey (1.0.3-7) unstable; urgency=medium
+
+  * Team upload
+  * Add build-dependency on libssl-dev, used in testsuite.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 31 Jan 2019 13:31:25 +0100
+
+node-evp-bytestokey (1.0.3-6) unstable; urgency=medium
+
+  * Team upload
+  * Fixup previous upload, by changing also testsuite
+    dependencies accordingly.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 31 Jan 2019 12:57:08 +0100
+
+node-evp-bytestokey (1.0.3-5) unstable; urgency=medium
+
+  * Team upload
+  * Rebuilt against libnode-dev (Closes: #920513)
+  * Declare compliance with policy 4.3.0
+  * Remove useless dependency versions
+  * Add upstream/metadata
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 26 Jan 2019 13:59:56 +0100
+
+node-evp-bytestokey (1.0.3-4) unstable; urgency=medium
+
+  * Bug fix: "autopkgtest (still) broken in experimental", thanks to Steve
+    Langasek (Closes: #890942).
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 18 May 2018 18:25:34 +0200
+
+node-evp-bytestokey (1.0.3-3) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Bump compat and policy (no changes)
+  * Fix cli testsuite
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 22 Feb 2018 13:18:40 +0100
+
+node-evp-bytestokey (1.0.3-2) experimental; urgency=medium
+
+  * Team upload
+  * Build-Depends nodejs-dev >= 8, Closes: #874699
+  * Build-Depends node-gyp
+  * Section: javascript
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 30 Dec 2017 14:47:59 +0100
+
+node-evp-bytestokey (1.0.3-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #872580).
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 07 Sep 2017 11:59:43 +0200
+
+node-evp-bytestokey (1.0.0-3) unstable; urgency=medium
+
+  * Fix autopkgtestsuite
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 27 May 2017 16:02:28 +0200
+
+node-evp-bytestokey (1.0.0-2) unstable; urgency=medium
+
+  * Fix testsuite for nocheck
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 11 May 2017 15:34:02 +0200
+
+node-evp-bytestokey (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #861812)
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 11 May 2017 15:23:56 +0200

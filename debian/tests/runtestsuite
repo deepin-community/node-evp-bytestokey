@@ -1,0 +1,33 @@
+#!/bin/sh
+set -e
+
+# for verbose make
+V=1
+export V
+
+PACKAGE="evp_bytestokey"
+SEDCMD="s,require(['][.][.]/?['],require('$PACKAGE',g"
+
+tmpdir=$(mktemp -d)
+trap 'rm -rf "$tmpdir"' EXIT INT TERM HUP
+
+sed_move_to_stderr() {
+    sed  -e "/$1/w /dev/stderr" -e "/$1/d"
+}
+
+
+cp -r test "$tmpdir"
+cp binding.gyp "$tmpdir"
+cp package.json "$tmpdir"
+
+
+cd "$tmpdir"
+sed -i "s,require('[.][.]/*,require('$PACKAGE,g" test/index.js
+sed -i "s/require('[.][.]')/require('$PACKAGE')/g" binding.gyp
+exec 5>&1
+exec 3>&1
+error_gyp=$( ( ( (node-gyp clean && node-gyp rebuild) 2>&1 >&3 3>&- ; echo $? >&4)  | sed_move_to_stderr 'it worked if it ends' 2>&1 >&3 3>&- ) 4>&1 >&5)
+exec 3>&-
+exec 5>&-
+test "X$error_gyp" = "X0"
+tap -R spec test/*.js
