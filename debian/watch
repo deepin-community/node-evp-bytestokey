@@ -1,5 +1,5 @@
-version=3
+version=4
 opts=\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-evp-bytestokey-$1.tar.gz/ \
- https://github.com/crypto-browserify/EVP_BytesToKey/tags .*/archive/v?([\d\.]+).tar.gz
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-evp-bytestokey-$1/ \
+ https://github.com/crypto-browserify/EVP_BytesToKey/tags .*/archive/.*/v?([\d\.]+).tar.gz

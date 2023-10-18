@@ -6,21 +6,3 @@
 
 %:
 	dh $@
-
-#override_dh_auto_build:
-
-override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
-	V=1 node-gyp rebuild
-	tap -R spec test/*.js
-else
-	@echo '**********************************************************'
-	@echo 'Skip test suite                                           '
-	@echo '**********************************************************'
-endif
-
-
-override_dh_auto_clean:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
-	V=1 node-gyp clean
-endif

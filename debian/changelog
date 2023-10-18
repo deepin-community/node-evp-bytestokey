@@ -1,3 +1,38 @@
+node-evp-bytestokey (1.0.3-11) unstable; urgency=medium
+
+  * Team upload
+  * Drop test, incompatible with nodejs >= 14 (Closes: #1008139)
+  * Use dh-sequence-nodejs auto install
+
+ -- Yadd <yadd@debian.org>  Wed, 23 Mar 2022 12:07:38 +0100
+
+node-evp-bytestokey (1.0.3-10) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on node-nan and node-tap.
+    + node-evp-bytestokey: Drop versioned constraint on nodejs in Depends.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev.
+
+  [ Yadd ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.6.0, no changes needed.
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Fix filenamemangle
+  * Fix GitHub tags regex
+  * Drop nodejs dependency
+
+ -- Yadd <yadd@debian.org>  Sun, 12 Dec 2021 18:34:15 +0100
+
 node-evp-bytestokey (1.0.3-9) unstable; urgency=medium
 
   * Bump debhelper and policy (no changes)
