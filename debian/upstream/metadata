@@ -1,7 +1,6 @@
 ---
 Archive: GitHub
 Bug-Database: https://github.com/crypto-browserify/EVP_BytesToKey/issues
-Contact: https://github.com/crypto-browserify/EVP_BytesToKey/issues
-Name: EVP_BytesToKey
+Bug-Submit: https://github.com/crypto-browserify/EVP_BytesToKey/issues/new
 Repository: https://github.com/crypto-browserify/EVP_BytesToKey.git
 Repository-Browse: https://github.com/crypto-browserify/EVP_BytesToKey
